@@ -5,7 +5,7 @@ export PLATFORM=amd64
 
 # version
 export DOCKER_VERSION=18.09.9
-export KUBE_VERSION=v1.17.9
+export KUBE_VERSION=v1.17.11
 export CNI_VERSION=v0.8.5
 export PAUSE_VERSION=3.1
 export ETCD_VERSION=3.4.3-0
