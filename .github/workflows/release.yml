@@ -16,10 +16,10 @@ jobs:
         run: |
           . ./version/${GITHUB_REF##*/}.sh
           . download_kube.sh
-          echo "::set-env name=KUBE_VERSION::$KUBE_VERSION"
-          echo "::set-env name=DOCKER_VERSION::$DOCKER_VERSION"
-          echo "::set-env name=FLANNEL_VERSION::$FLANNEL_VERSION"
-          echo "::set-env name=PLATFORM::$PLATFORM"
+          echo "KUBE_VERSION=$KUBE_VERSION" >> $GITHUB_ENV
+          echo "DOCKER_VERSION=$DOCKER_VERSION" >> $GITHUB_ENV
+          echo "FLANNEL_VERSION=$FLANNEL_VERSION" >> $GITHUB_ENV
+          echo "PLATFORM=$PLATFORM" >> $GITHUB_ENV
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
